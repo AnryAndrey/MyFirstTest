@@ -1,8 +1,6 @@
 package com.lysenko.datastructures.list;
 
-/**
- * Created by dsk11 on 8/17/2018.
- */
+
 public class ArrayList implements List {
     private Object[] array = new Object[5];
     private int size;
@@ -14,8 +12,8 @@ public class ArrayList implements List {
     }
 
     @Override
-    public void add(Object value, int index) {
-
+    public void add(Object value, int index) throws IndexOutOfBoundsException {
+            array[index] = value;
     }
 
     @Override

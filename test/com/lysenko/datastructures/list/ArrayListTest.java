@@ -33,5 +33,19 @@ public class ArrayListTest {
         assertEquals(3, arrayWithThreeElements.size());
     }
 
+    @Test
+    public  void testInsert() {
+        arrayWithThreeElements.add("G", 2);
+        assertEquals("G", arrayWithThreeElements.get(2));
+        assertEquals("B", arrayWithThreeElements.get(1));
+        assertEquals("A", arrayWithThreeElements.get(0));
+    }
+
+    @Test
+    public void testInsertException(){
+        arrayWithThreeElements.add("R", -5);
+        assertEquals("R", arrayWithThreeElements.get(7));
+    }
+
 
 }

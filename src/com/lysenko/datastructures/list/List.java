@@ -1,8 +1,6 @@
 package com.lysenko.datastructures.list;
 
-/**
- * Created by dsk11 on 8/17/2018.
- */
+
     public interface List {
         // add value to the end of the list
         void add(Object value);
