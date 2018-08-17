@@ -20,12 +20,26 @@ public class ArrayList implements List {
         }
         array[index] = value;
         size++;
-
     }
 
     @Override
     public Object remove(int index) {
-        return null;
+        Object result = new Object();
+
+        if (index < 0 || index > size) {
+            IndexOutOfBoundsException IndexOutOfBoundsException =
+                    new IndexOutOfBoundsException("DFG");
+            throw IndexOutOfBoundsException;
+        }
+        result = array[index];
+
+        for (int i = index; i < array.length-1 ; i++) {
+            array[i] = array[i+1];
+        }
+        array[size] = null;
+        size--;
+
+        return result;
     }
 
     @Override

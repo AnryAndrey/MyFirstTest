@@ -51,4 +51,11 @@ public class ArrayListTest {
         arrayWithThreeElements.add("R", 20);
     }
 
+    @Test
+    public void testDeletion(){
+        arrayWithThreeElements.remove(1);
+        assertEquals("A", arrayWithThreeElements.get(0));
+        assertEquals("C", arrayWithThreeElements.get(1));
+    }
+
 }
