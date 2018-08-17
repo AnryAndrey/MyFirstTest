@@ -42,9 +42,13 @@ public class ArrayListTest {
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
-    public void testInsertException(){
+    public void testInsertExceptionMinus(){
         arrayWithThreeElements.add("R", -5);
     }
 
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testInsertExceptionPlus(){
+        arrayWithThreeElements.add("R", 20);
+    }
 
 }
