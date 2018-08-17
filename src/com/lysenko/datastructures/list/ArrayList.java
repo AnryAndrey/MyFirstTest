@@ -12,8 +12,15 @@ public class ArrayList implements List {
     }
 
     @Override
-    public void add(Object value, int index) throws IndexOutOfBoundsException {
-            array[index] = value;
+    public void add(Object value, int index)  {
+        if (index < 0 || index > size) {
+            IndexOutOfBoundsException IndexOutOfBoundsException =
+                    new IndexOutOfBoundsException("DFG");
+            throw IndexOutOfBoundsException;
+        }
+        array[index] = value;
+        size++;
+
     }
 
     @Override

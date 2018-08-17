@@ -41,10 +41,9 @@ public class ArrayListTest {
         assertEquals("A", arrayWithThreeElements.get(0));
     }
 
-    @Test
+    @Test(expected = IndexOutOfBoundsException.class)
     public void testInsertException(){
         arrayWithThreeElements.add("R", -5);
-        assertEquals("R", arrayWithThreeElements.get(7));
     }
 
 
